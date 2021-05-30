@@ -11,8 +11,10 @@ import net.minecraft.util.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements IArmorMaterial {
-    CUM("cum", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+    CUM(":cum", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.CUM_JELLY.get());});
+
+
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
@@ -38,13 +40,13 @@ public enum ModArmorMaterial implements IArmorMaterial {
 
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlotType slot) {
-        return HEALTH_PER_SLOT[slot.getIndex()] * this.durabilityMultiplier;
+    public int getDurabilityForSlot(EquipmentSlotType slotIn) {
+        return HEALTH_PER_SLOT[slotIn.getIndex()] * this.durabilityMultiplier;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlotType slot) {
-        return this.slotProtections[slot.getIndex()];
+    public int getDefenseForSlot(EquipmentSlotType slotIn) {
+        return this.slotProtections[slotIn.getIndex()];
     }
 
     @Override

@@ -19,6 +19,8 @@ public class ModArmor {
     public static final RegistryObject<ArmorItem> CUM_GREAVES = Registration.ITEMS.register("cum_greaves", () ->
             new ArmorItem(ModArmorMaterial.CUM, EquipmentSlotType.LEGS, (new Item.Properties()).tab(ItemGroup.TAB_COMBAT)));
 
+    private String texturePath;
+
 
 
     static void register(){}
