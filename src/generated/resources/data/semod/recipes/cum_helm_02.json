@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "semod:cum_jelly"
+    }
+  },
+  "result": {
+    "item": "semod:cum_helmet"
+  }
+}
