@@ -20,6 +20,7 @@ import net.shylex.semod.setup.ModBlocks;
 import net.shylex.semod.setup.Registration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import net.shylex.semod.world.ModWorldFeature;
 
 import java.util.stream.Collectors;
 
@@ -45,9 +46,12 @@ public class SeMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         //Register the clientSetup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        // Register the Ore Generation
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ModWorldFeature::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(ModWorldFeature.class);
     }
 
     private void setup(final FMLCommonSetupEvent event)

@@ -2,6 +2,7 @@ package net.shylex.semod.setup;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -37,6 +38,11 @@ public class ModBlocks {
         RegistryObject<T> ret = registerNoItem(name, block);
         Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
         return ret;
+    }
+
+    private BlockState defaultBlockState;
+    public final BlockState defaultBlockState() {
+        return this.defaultBlockState;
     }
 
 
