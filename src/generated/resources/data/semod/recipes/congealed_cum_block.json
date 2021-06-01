@@ -3,9 +3,12 @@
   "ingredients": [
     {
       "item": "semod:cum_block"
+    },
+    {
+      "item": "semod:cum_jelly"
     }
   ],
   "result": {
-    "item": "semod:cum_jelly"
+    "item": "semod:congealed_cum_block"
   }
 }

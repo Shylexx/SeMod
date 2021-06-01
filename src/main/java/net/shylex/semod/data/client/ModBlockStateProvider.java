@@ -15,5 +15,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels(){
         simpleBlock(ModBlocks.CUM_BLOCK.get());
         simpleBlock(ModBlocks.JIZZ_ORE.get());
+        simpleBlock(ModBlocks.CONGEALED_CUM_BLOCK.get());
     }
 }

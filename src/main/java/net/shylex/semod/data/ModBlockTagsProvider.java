@@ -17,8 +17,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     protected void addTags(){
         tag(ModTags.Blocks.ORES_JIZZ).add(ModBlocks.JIZZ_ORE.get());
         tag(Tags.Blocks.ORES).addTag(ModTags.Blocks.ORES_JIZZ);
+
         tag(ModTags.Blocks.STORAGE_BLOCKS_CUM).add(ModBlocks.CUM_BLOCK.get());
         tag(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_CUM);
+
+        tag(ModTags.Blocks.STORAGE_BLOCKS_CONGEALED_CUM).add(ModBlocks.CONGEALED_CUM_BLOCK.get());
+        tag(Tags.Blocks.STORAGE_BLOCKS).addTag(ModTags.Blocks.STORAGE_BLOCKS_CONGEALED_CUM);
 
     }
 }

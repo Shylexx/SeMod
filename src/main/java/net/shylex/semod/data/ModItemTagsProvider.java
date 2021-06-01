@@ -22,6 +22,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
         copy(ModTags.Blocks.STORAGE_BLOCKS_CUM, ModTags.Items.STORAGE_BLOCKS_CUM);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
+        copy(ModTags.Blocks.STORAGE_BLOCKS_CONGEALED_CUM, ModTags.Items.STORAGE_BLOCKS_CONGEALED_CUM);
+        copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
         tag(ModTags.Items.INGOTS_CUM).add(ModItems.CUM_JELLY.get());
         tag(Tags.Items.INGOTS).addTag(ModTags.Items.INGOTS_CUM);

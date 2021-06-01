@@ -42,6 +42,7 @@ public class ModLootTableProvider extends LootTableProvider {
         protected void addTables(){
             dropSelf(ModBlocks.CUM_BLOCK.get());
             dropSelf(ModBlocks.JIZZ_ORE.get());
+            dropSelf(ModBlocks.CONGEALED_CUM_BLOCK.get());
         }
 
         @Override

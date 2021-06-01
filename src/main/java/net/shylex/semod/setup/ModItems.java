@@ -1,5 +1,6 @@
 package net.shylex.semod.setup;
 
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -15,7 +16,9 @@ public class ModItems {
             new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
 
     public static final RegistryObject<Potion> CUM_CHALICE = Registration.POTION.register("cum_chalice",() -> new Potion(
-            new EffectInstance(Effects.LEVITATION, 3600)));
+            new EffectInstance(Effects.LEVITATION, 600)));
+
+
 
     static void register() {}
 }

@@ -17,6 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels(){
         withExistingParent("jizz_ore", modLoc("block/jizz_ore"));
         withExistingParent("cum_block", modLoc("block/cum_block"));
+        withExistingParent("congealed_cum_block", modLoc("block/congealed_cum_block"));
 
 
 

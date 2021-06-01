@@ -28,6 +28,13 @@ public class ModBlocks {
                     .noCollission()
                     .harvestTool(ToolType.PICKAXE)));
 
+    public static final RegistryObject<Block> CONGEALED_CUM_BLOCK = register("congealed_cum_block", () -> new SlimeBlock(AbstractBlock.Properties.of(Material.CLAY)
+            .strength(2.0F)
+            .harvestLevel(0)
+            .sound(SoundType.SLIME_BLOCK)
+            .noOcclusion()
+            .harvestTool(ToolType.PICKAXE)));
+
     private  static <T extends Block>RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return Registration.BLOCKS.register(name, block);
     }

@@ -1,9 +1,14 @@
 package net.shylex.semod.data.client;
 
 import net.minecraft.data.*;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.potion.PotionUtils;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.shylex.semod.SeMod;
 import net.shylex.semod.setup.ModArmor;
 import net.shylex.semod.setup.ModBlocks;
@@ -21,7 +26,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer){
         //Turn Storage Block into 9 Jelly
-        ShapelessRecipeBuilder.shapeless(ModItems.CUM_JELLY.get(), 9)
+        ShapelessRecipeBuilder.shapeless(ModItems.CUM_JELLY.get(), 1)
                 .requires(ModBlocks.CUM_BLOCK.get())
                 .unlockedBy("has_item", has(ModItems.CUM_JELLY.get()))
                 .save(consumer);
@@ -32,6 +37,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
+                .unlockedBy("has_item", has(ModItems.CUM_JELLY.get()))
+                .save(consumer);
+
+        //Turn Block into Congealed Block
+        ShapelessRecipeBuilder.shapeless(ModBlocks.CONGEALED_CUM_BLOCK.get(), 1)
+                .requires(ModBlocks.CUM_BLOCK.get())
+                .requires(ModItems.CUM_JELLY.get())
                 .unlockedBy("has_item", has(ModItems.CUM_JELLY.get()))
                 .save(consumer);
 
@@ -188,7 +200,21 @@ public class ModRecipeProvider extends RecipeProvider {
         //Chalice Recipe
 
 
+
     }
+
+    /*public static void addBrewingRecipes(FMLCommonSetupEvent event) {
+        event.enqueueWork( () -> {
+            BrewingRecipeRegistry
+                    .addRecipe(Ingredient.of
+                            (PotionUtils.setPotion(
+                                            ItemStack.EMPTY,
+                                            Potions.WATER)),
+                            Ingredient.of(new ItemStack(ModItems.CUM_JELLY.get())),
+                            PotionUtils.setPotion
+                                    (ItemStack.EMPTY, ModItems.CUM_CHALICE.get()));
+        } );
+    }*/
 
     private static ResourceLocation modId(String path){
         return new ResourceLocation(SeMod.MOD_ID, path);

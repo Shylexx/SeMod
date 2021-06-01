@@ -1,5 +1,6 @@
 package net.shylex.semod.setup;
 
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Potion;
@@ -10,14 +11,17 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.block.Block;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 import net.shylex.semod.SeMod;
 
 public class Registration {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SeMod.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
-    public static final DeferredRegister<Item> TOOLS = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
-    public static final DeferredRegister<Item> ARMOR = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
-    public static final DeferredRegister<Potion> POTION = DeferredRegister.create(ForgeRegistries.POTION_TYPES, SeMod.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = create(ForgeRegistries.BLOCKS);
+    public static final DeferredRegister<Item> ITEMS = create(ForgeRegistries.ITEMS);
+    public static final DeferredRegister<Item> TOOLS = create(ForgeRegistries.ITEMS);
+    public static final DeferredRegister<Item> ARMOR = create(ForgeRegistries.ITEMS);
+    public static final DeferredRegister<ContainerType<?>> CONTAINERS = create(ForgeRegistries.CONTAINERS);
+    public static final DeferredRegister<Potion> POTION = create(ForgeRegistries.POTION_TYPES);
 
 
     public static void register() {
@@ -27,10 +31,15 @@ public class Registration {
         TOOLS.register(modEventBus);
         ARMOR.register(modEventBus);
         POTION.register(modEventBus);
+        CONTAINERS.register(modEventBus);
 
         ModItems.register();
         ModBlocks.register();
         ModTools.register();
         ModArmor.register();
+    }
+
+    private static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry){
+        return DeferredRegister.create(registry, SeMod.MOD_ID);
     }
 }

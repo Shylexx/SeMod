@@ -13,6 +13,7 @@ public class ModTags {
     public static final class Blocks{
         public static final ITag.INamedTag<Block> ORES_JIZZ = forge("ores/jizz");
         public static final ITag.INamedTag<Block> STORAGE_BLOCKS_CUM = forge("storage_blocks/cum");
+        public static final ITag.INamedTag<Block> STORAGE_BLOCKS_CONGEALED_CUM = forge("storage_blocks/congealed_cum");
 
         private static ITag.INamedTag<Block> forge(String path){
             return BlockTags.bind(new ResourceLocation("forge", path).toString());
@@ -29,6 +30,7 @@ public class ModTags {
     public static final class Items{
         public static final ITag.INamedTag<Item> ORES_JIZZ = forge("ores/jizz");
         public static final ITag.INamedTag<Item> STORAGE_BLOCKS_CUM = forge("storage_blocks/cum");
+        public static final ITag.INamedTag<Item> STORAGE_BLOCKS_CONGEALED_CUM = forge("storage_blocks/congealed_cum");
 
         public static final ITag.INamedTag<Item> INGOTS_CUM = forge("ingots/cum");
 

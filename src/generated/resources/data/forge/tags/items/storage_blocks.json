@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "#forge:storage_blocks/cum"
+    "#forge:storage_blocks/cum",
+    "#forge:storage_blocks/congealed_cum",
+    "#forge:storage_blocks/cum",
+    "#forge:storage_blocks/congealed_cum"
   ]
 }
