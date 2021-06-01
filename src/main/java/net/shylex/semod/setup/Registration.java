@@ -1,6 +1,8 @@
 package net.shylex.semod.setup;
 
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.Potion;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +17,7 @@ public class Registration {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
     public static final DeferredRegister<Item> TOOLS = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
     public static final DeferredRegister<Item> ARMOR = DeferredRegister.create(ForgeRegistries.ITEMS, SeMod.MOD_ID);
+    public static final DeferredRegister<Potion> POTION = DeferredRegister.create(ForgeRegistries.POTION_TYPES, SeMod.MOD_ID);
 
 
     public static void register() {
@@ -23,6 +26,7 @@ public class Registration {
         ITEMS.register(modEventBus);
         TOOLS.register(modEventBus);
         ARMOR.register(modEventBus);
+        POTION.register(modEventBus);
 
         ModItems.register();
         ModBlocks.register();

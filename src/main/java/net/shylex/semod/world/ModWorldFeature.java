@@ -22,10 +22,10 @@ public class ModWorldFeature {
     // register to the Mod event bus
     public static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            JIZZ_ORE_FEATURE = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.JIZZ_ORE.get().defaultBlockState(), 17))
-                    .range(128)
+            JIZZ_ORE_FEATURE = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.JIZZ_ORE.get().defaultBlockState(), 9))
+                    .range(32)
                     .squared()
-                    .count(20);
+                    .count(2);
 
             Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(SeMod.MOD_ID, "jizz_ore"), JIZZ_ORE_FEATURE);
         });

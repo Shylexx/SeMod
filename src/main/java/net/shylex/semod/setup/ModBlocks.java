@@ -1,9 +1,6 @@
 package net.shylex.semod.setup;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -23,11 +20,12 @@ public class ModBlocks {
                     .harvestTool(ToolType.PICKAXE)));
 
     public static final RegistryObject<Block> CUM_BLOCK = register("cum_block", () ->
-            new Block(AbstractBlock.Properties.of(Material.CLAY)
+            new WebBlock(AbstractBlock.Properties.of(Material.CLAY)
                     .strength(2, 3)
                     .harvestLevel(0)
                     .sound(SoundType.SLIME_BLOCK)
                     .noOcclusion()
+                    .noCollission()
                     .harvestTool(ToolType.PICKAXE)));
 
     private  static <T extends Block>RegistryObject<T> registerNoItem(String name, Supplier<T> block) {

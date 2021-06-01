@@ -184,6 +184,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_item", has(ModBlocks.JIZZ_ORE.get()))
                 .save(consumer, modId("cum_jelly_blasting"));
 
+
+        //Chalice Recipe
+
+
     }
 
     private static ResourceLocation modId(String path){

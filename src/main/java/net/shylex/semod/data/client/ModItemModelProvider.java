@@ -33,6 +33,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         builder(itemGenerated, "cum_chestplate");
         builder(itemGenerated, "cum_greaves");
         builder(itemGenerated, "cum_boots");
+
+        builder(itemGenerated, "cum_chalice");
     }
 
     private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
